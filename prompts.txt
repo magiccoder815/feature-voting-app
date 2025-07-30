@@ -1,0 +1,78 @@
+0. Prompt:
+Write each prompt I send to you into a file prompts.txt, so I can audit the work.
+
+---
+
+1. Prompt:
+I want to build a full-stack feature voting system with a backend API, database, and an Android mobile frontend. Let's use Django for the backend and React Native (TypeScript) for the Android frontend. Please walk me through the backend setup step by step.
+
+---
+
+2. Prompt:
+Set up a Django project with Django REST Framework using SQLite. Create a model named Feature with fields: title (string), upvotes (integer, default 0), and created_at (auto timestamp). Include instructions for initializing the project and setting up the app.
+
+---
+
+3. Prompt:
+Configure Django settings to include the new app, CORS headers, and Django REST Framework. Enable `ALLOWED_HOSTS` and CORS access for local IP connections.
+
+---
+
+4. Prompt:
+Create a Feature serializer using Django REST Framework that includes all fields.
+
+---
+
+5. Prompt:
+Create views:
+- GET /api/features/ for listing all features (sorted by upvotes descending)
+- POST /api/features/ for adding a feature
+- POST /api/features/<id>/upvote/ to upvote a feature
+
+---
+
+6. Prompt:
+Configure `api/urls.py` and include these in the project `urls.py` as `/api/features/` and `/api/features/<id>/upvote/`.
+
+---
+
+7. Prompt:
+Explain how to run Django using `0.0.0.0:8000` to expose it on the local network and how to find the correct IP using `ipconfig`.
+
+---
+
+8. Prompt:
+Create a new React Native app with Expo using the TypeScript template. Set up folders for components, screens, and constants. Install Axios.
+
+---
+
+9. Prompt:
+In the frontend, create a `FeatureItem.tsx` component that accepts a feature prop and upvote handler. Display title and votes with an "Upvote" button.
+
+---
+
+10. Prompt:
+Create a `HomeScreen.tsx` that:
+- Fetches features on load
+- Allows adding new features via TextInput
+- Supports upvoting features
+- Uses FlatList to render feature items
+
+---
+
+11. Prompt:
+Update `App.tsx` to display the `HomeScreen` as the root screen.
+
+---
+
+12. Prompt:
+Set `API_BASE_URL` to the correct local IP address from the Django server in `constants.ts`. Explain why `localhost` or public IPs from ip.me should not be used.
+
+---
+
+13. Prompt:
+Explain how to use Expo Go on LDPlayer:
+- Download the APK from expo.dev/client
+- Install via drag-and-drop
+- Start expo with `npx expo start --tunnel`
+- Manually enter the tunnel URL into Expo Go

@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+env/
+*.sqlite3
+
+# Node/Expo
+mobile/node_modules/
+.expo/
+.expo-shared/
+
+# System
+.DS_Store
+
+# VSCode
+.vscode/
+
+# Environment files
+.env
